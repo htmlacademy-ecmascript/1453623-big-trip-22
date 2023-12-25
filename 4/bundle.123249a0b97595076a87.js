@@ -15,9 +15,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "DESCRIPTIONS": () => (/* binding */ DESCRIPTIONS),
 /* harmony export */   "OFFERS": () => (/* binding */ OFFERS),
 /* harmony export */   "PRICE": () => (/* binding */ PRICE),
-/* harmony export */   "TYPE": () => (/* binding */ TYPE)
+/* harmony export */   "TYPES": () => (/* binding */ TYPES)
 /* harmony export */ });
-const TYPE = ['Taxi', 'Bus', 'Train', 'Ship', 'Drive', 'Flight', 'Check-in', 'Sightseeing', 'Restaurant'];
+const TYPES = ['Taxi', 'Bus', 'Train', 'Ship', 'Drive', 'Flight', 'Check-in', 'Sightseeing', 'Restaurant'];
 const DESCRIPTIONS = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Cras aliquet varius magna, non porta ligula feugiat eget.', 'Fusce tristique felis at fermentum pharetra.', 'Aliquam id orci ut lectus varius viverra.', 'Nullam nunc ex, convallis sed finibus eget, sollicitudin eget ante.', 'Phasellus eros mauris, condimentum sed nibh vitae, sodales efficitur ipsum.', 'Sed blandit, eros vel aliquam faucibus, purus ex euismod diam, eu luctus nunc ante ut dui.', 'Nunc fermentum tortor ac porta dapibus.', 'In rutrum ac purus sit amet tempus.'];
 const CITIES = ['Amsterdam', 'Chamonix', 'Geneva', 'Berlin', 'Zurich', 'Moskow'];
 const OFFERS = ['Rent a car', 'Add luggage', 'Switch to comfort', 'Order Uber', 'Add breakfast'];
@@ -27,7 +27,8 @@ const PRICE = {
 };
 const DATE_FORMAT = {
   shortDate: 'D MMM',
-  time: 'HH:mm'
+  time: 'HH:mm',
+  slashDate: 'DD/MM/YY HH:mm'
 };
 
 
@@ -50,44 +51,48 @@ __webpack_require__.r(__webpack_exports__);
 
 const mockPoints = [{
   date: new Date('2023-01-01'),
-  type: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.TYPE),
+  type: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.TYPES),
   place: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.CITIES),
   startTime: new Date('2023-01-04 07:00'),
   endTime: new Date('2023-01-04 07:10'),
   price: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomFromRange)(_const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.min, _const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.max),
   offers: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.OFFERS),
   offersPrice: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomFromRange)(_const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.min, _const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.max),
-  isFavorite: true
+  isFavorite: true,
+  description: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.DESCRIPTIONS)
 }, {
   date: new Date('2023-01-02'),
-  type: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.TYPE),
+  type: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.TYPES),
   place: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.CITIES),
   startTime: new Date('2023-01-04 07:00'),
   endTime: new Date('2023-01-05 07:30'),
   price: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomFromRange)(_const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.min, _const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.max),
   offers: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.OFFERS),
   offersPrice: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomFromRange)(_const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.min, _const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.max),
-  isFavorite: true
+  isFavorite: true,
+  description: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.DESCRIPTIONS)
 }, {
   date: new Date('2023-01-03'),
-  type: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.TYPE),
+  type: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.TYPES),
   place: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.CITIES),
   startTime: new Date('2023-01-04 07:00'),
   endTime: new Date('2023-01-04 08:30'),
   price: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomFromRange)(_const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.min, _const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.max),
   offers: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.OFFERS),
   offersPrice: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomFromRange)(_const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.min, _const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.max),
-  isFavorite: true
+  isFavorite: true,
+  description: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.DESCRIPTIONS)
 }, {
   date: new Date('2023-01-04'),
-  type: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.TYPE),
+  type: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.TYPES),
   place: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.CITIES),
   startTime: new Date('2023-01-04 07:00'),
   endTime: new Date('2023-01-04 07:30'),
   price: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomFromRange)(_const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.min, _const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.max),
   offers: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.OFFERS),
   offersPrice: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomFromRange)(_const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.min, _const_js__WEBPACK_IMPORTED_MODULE_1__.PRICE.max),
-  isFavorite: true
+  isFavorite: true,
+  description: (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(_const_js__WEBPACK_IMPORTED_MODULE_1__.DESCRIPTIONS)
 }];
 function getRandomPoint() {
   return (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.getRandomArrayElement)(mockPoints);
@@ -137,15 +142,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _view_list_events_view_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/list-events-view.js */ "./src/view/list-events-view.js");
 /* harmony import */ var _view_list_sort_view_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../view/list-sort-view.js */ "./src/view/list-sort-view.js");
 /* harmony import */ var _view_event_view_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../view/event-view.js */ "./src/view/event-view.js");
-/* harmony import */ var _model_point_model_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../model/point-model.js */ "./src/model/point-model.js");
-/* harmony import */ var _render_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../render.js */ "./src/render.js");
+/* harmony import */ var _view_editing_event_view_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../view/editing-event-view.js */ "./src/view/editing-event-view.js");
+/* harmony import */ var _model_point_model_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../model/point-model.js */ "./src/model/point-model.js");
+/* harmony import */ var _render_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../render.js */ "./src/render.js");
+/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils.js */ "./src/utils.js");
 
 
 
 
 
-// import EditingEventTempate from '../view/editing-event-view.js';
+
 // import NewEventTempate from '../view/new-event-view.js';
+
 
 
 
@@ -158,19 +166,21 @@ class Presenter {
     eventContainer
   }) {
     this.eventContainer = eventContainer;
-    this.pointModel = new _model_point_model_js__WEBPACK_IMPORTED_MODULE_5__["default"]();
+    this.pointModel = new _model_point_model_js__WEBPACK_IMPORTED_MODULE_6__["default"]();
   }
   init() {
     this.pointList = [...this.pointModel.getPoints()];
-    (0,_render_js__WEBPACK_IMPORTED_MODULE_6__.render)(new _view_list_filter_view_js__WEBPACK_IMPORTED_MODULE_1__["default"](), siteFiltersElement);
-    (0,_render_js__WEBPACK_IMPORTED_MODULE_6__.render)(new _view_info_view_js__WEBPACK_IMPORTED_MODULE_0__["default"](), siteInfoElement, 'afterbegin');
-    (0,_render_js__WEBPACK_IMPORTED_MODULE_6__.render)(new _view_list_sort_view_js__WEBPACK_IMPORTED_MODULE_3__["default"](), this.eventContainer);
-    (0,_render_js__WEBPACK_IMPORTED_MODULE_6__.render)(this.eventListComponent, this.eventContainer);
-    // render(new EditingEventTempate(), this.eventListComponent.getElement(), 'afterbegin');
+    (0,_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(new _view_list_filter_view_js__WEBPACK_IMPORTED_MODULE_1__["default"](), siteFiltersElement);
+    (0,_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(new _view_info_view_js__WEBPACK_IMPORTED_MODULE_0__["default"](), siteInfoElement, 'afterbegin');
+    (0,_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(new _view_list_sort_view_js__WEBPACK_IMPORTED_MODULE_3__["default"](), this.eventContainer);
+    (0,_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(this.eventListComponent, this.eventContainer);
+    (0,_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(new _view_editing_event_view_js__WEBPACK_IMPORTED_MODULE_5__["default"]({
+      point: (0,_utils_js__WEBPACK_IMPORTED_MODULE_8__.getRandomArrayElement)(this.pointList)
+    }), this.eventListComponent.getElement(), 'afterbegin');
     // render(new NewEventTempate(), this.eventListComponent.getElement());
 
     for (let i = 0; i < this.pointList.length; i++) {
-      (0,_render_js__WEBPACK_IMPORTED_MODULE_6__.render)(new _view_event_view_js__WEBPACK_IMPORTED_MODULE_4__["default"]({
+      (0,_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(new _view_event_view_js__WEBPACK_IMPORTED_MODULE_4__["default"]({
         point: this.pointList[i]
       }), this.eventListComponent.getElement());
     }
@@ -252,6 +262,153 @@ function durationEvent(startTime, endTime) {
   return dayjs__WEBPACK_IMPORTED_MODULE_0___default()(duration).format(timeFormat);
 }
 
+
+/***/ }),
+
+/***/ "./src/view/editing-event-view.js":
+/*!****************************************!*\
+  !*** ./src/view/editing-event-view.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EditingEventTempate)
+/* harmony export */ });
+/* harmony import */ var _render_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../render.js */ "./src/render.js");
+/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils.js */ "./src/utils.js");
+/* harmony import */ var _const_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../const.js */ "./src/const.js");
+
+
+
+function createDestinationOption(places) {
+  let destinationOption = '';
+  for (let i = 0; i < places.length; i++) {
+    destinationOption += `<option value="${places[i]}"></option>`;
+  }
+  return destinationOption;
+}
+function createTypeOption(types) {
+  let typesOption = '';
+  for (let i = 0; i < types.length; i++) {
+    const typeLowerCase = types[i].toLowerCase();
+    typesOption += `<div class="event__type-item">
+    <input id="event-type-${typeLowerCase}-1" class="event__type-input  visually-hidden" type="radio" name="event-type" value="${typeLowerCase}">
+    <label class="event__type-label  event__type-label--${typeLowerCase}" for="event-type-${typeLowerCase}-1">${types[i]}</label>
+    </div>`;
+  }
+  return typesOption;
+}
+function createOfferSelector(offers, price, isChecked) {
+  const {
+    min,
+    max
+  } = price;
+  const checked = isChecked ? 'checked' : '';
+  let typesOffer = '';
+  for (let i = 0; i < offers.length; i++) {
+    typesOffer += `<div class="event__offer-selector">
+      <input class="event__offer-checkbox  visually-hidden" id="event-offer-luggage-1" type="checkbox" name="event-offer-luggage" ${checked}>
+      <label class="event__offer-label" for="event-offer-luggage-1">
+        <span class="event__offer-title">${offers[i]}</span>
+        &plus;&euro;&nbsp;
+        <span class="event__offer-price">${(0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.getRandomFromRange)(min, max)}</span>
+      </label>
+    </div>`;
+  }
+  return typesOffer;
+}
+function createEditingEventTemplate(point) {
+  const {
+    type,
+    place,
+    startTime,
+    endTime,
+    price,
+    description
+  } = point;
+  const startDateHumanize = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.humanizeTime)(startTime, _const_js__WEBPACK_IMPORTED_MODULE_2__.DATE_FORMAT.slashDate);
+  const endDateHumanize = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__.humanizeTime)(endTime, _const_js__WEBPACK_IMPORTED_MODULE_2__.DATE_FORMAT.slashDate);
+  return `<li class="trip-events__item">
+      <form class="event event--edit" action="#" method="post">
+        <header class="event__header">
+          <div class="event__type-wrapper">
+            <label class="event__type  event__type-btn" for="event-type-toggle-1">
+              <span class="visually-hidden">Choose event type</span>
+              <img class="event__type-icon" width="17" height="17" src="img/icons/${type}.png" alt="Event type icon">
+            </label>
+            <input class="event__type-toggle  visually-hidden" id="event-type-toggle-1" type="checkbox">
+            <div class="event__type-list">
+              <fieldset class="event__type-group">
+                <legend class="visually-hidden">Event type</legend>
+                ${createTypeOption(_const_js__WEBPACK_IMPORTED_MODULE_2__.TYPES)}
+              </fieldset>
+            </div>
+          </div>
+          <div class="event__field-group  event__field-group--destination">
+            <label class="event__label  event__type-output" for="event-destination-1">
+              ${type}
+            </label>
+            <input class="event__input  event__input--destination" id="event-destination-1" type="text" name="event-destination" value="${place}" list="destination-list-1">
+            <datalist id="destination-list-1">
+              ${createDestinationOption(_const_js__WEBPACK_IMPORTED_MODULE_2__.CITIES)}
+            </datalist>
+          </div>
+          <div class="event__field-group  event__field-group--time">
+            <label class="visually-hidden" for="event-start-time-1">From</label>
+            <input class="event__input  event__input--time" id="event-start-time-1" type="text" name="event-start-time" value="${startDateHumanize}">
+            &mdash;
+            <label class="visually-hidden" for="event-end-time-1">To</label>
+            <input class="event__input  event__input--time" id="event-end-time-1" type="text" name="event-end-time" value="${endDateHumanize}">
+          </div>
+          <div class="event__field-group  event__field-group--price">
+            <label class="event__label" for="event-price-1">
+              <span class="visually-hidden">Price</span>
+              &euro;
+            </label>
+            <input class="event__input  event__input--price" id="event-price-1" type="text" name="event-price" value="${price}">
+          </div>
+          <button class="event__save-btn  btn  btn--blue" type="submit">Save</button>
+          <button class="event__reset-btn" type="reset">Delete</button>
+          <button class="event__rollup-btn" type="button">
+            <span class="visually-hidden">Open event</span>
+          </button>
+        </header>
+        <section class="event__details">
+          <section class="event__section  event__section--offers">
+            <h3 class="event__section-title  event__section-title--offers">Offers</h3>
+            <div class="event__available-offers">
+            ${createOfferSelector(_const_js__WEBPACK_IMPORTED_MODULE_2__.OFFERS, _const_js__WEBPACK_IMPORTED_MODULE_2__.PRICE, false)}
+            </div>
+          </section>
+          <section class="event__section  event__section--destination">
+            <h3 class="event__section-title  event__section-title--destination">Destination</h3>
+            <p class="event__destination-description">${description}</p>
+          </section>
+        </section>
+      </form>
+    </li>`;
+}
+class EditingEventTempate {
+  constructor({
+    point
+  }) {
+    this.point = point;
+  }
+  getTemplate() {
+    return createEditingEventTemplate(this.point);
+  }
+  getElement() {
+    if (!this.element) {
+      this.element = (0,_render_js__WEBPACK_IMPORTED_MODULE_0__.createElement)(this.getTemplate());
+    }
+    return this.element;
+  }
+  removeElement() {
+    this.element = null;
+  }
+}
 
 /***/ }),
 
@@ -627,4 +784,4 @@ eventPresenter.init();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.d010b2687a910f4b2408.js.map
+//# sourceMappingURL=bundle.123249a0b97595076a87.js.map
